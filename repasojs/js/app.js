@@ -143,20 +143,42 @@ const persona = {
 // );
 // console.log(mostrarCliente);
 
-// Object Constructor
-function Tarea(nombre, urgencia) {
-  this.nombre = nombre;
-  this.urgencia = urgencia;
-}
-//Agregar un prototype a tarea:
-Tarea.prototype.mostrarInformacionTarea = function () {
-  return `La tarea ${this.nombre} tiene una prioridad de ${this.urgencia}`;
-};
+// // Object Constructor
+// function Tarea(nombre, urgencia) {
+//   this.nombre = nombre;
+//   this.urgencia = urgencia;
+// }
+// //Agregar un prototype a tarea:
+// Tarea.prototype.mostrarInformacionTarea = function () {
+//   return `La tarea ${this.nombre} tiene una prioridad de ${this.urgencia}`;
+// };
 
-// crear una nueva tarea
-const tarea1 = new Tarea("Aprender JavaScript y React", "Urgente");
-const tarea2 = new Tarea("Pasear al perro", "Media");
-console.log(tarea1);
-console.log(tarea1.mostrarInformacionTarea());
-console.log(tarea2);
-console.log(tarea2.mostrarInformacionTarea());
+// // crear una nueva tarea
+// const tarea1 = new Tarea("Aprender JavaScript y React", "Urgente");
+// const tarea2 = new Tarea("Pasear al perro", "Media");
+// console.log(tarea1);
+// console.log(tarea1.mostrarInformacionTarea());
+// console.log(tarea2);
+// console.log(tarea2.mostrarInformacionTarea());
+
+// Destructuring de objetos
+const aprendiendoJS = {
+    version:{
+      nueva: 'ES6+',
+      anterior: 'ES5'
+    },
+    frameworks: ['React', 'VueJS', 'AngularJS']
+}
+
+// Destructuring es extraer valores de un objeto
+
+//console.log(aprendiendoJS);
+
+//versión anterior
+// let version = aprendiendoJS.version.anterior;
+// let framework = aprendiendoJS.frameworks[1];
+// console.log(framework);
+
+// Destructuring forma nueva
+let {anterior} = aprendiendoJS.version;
+console.log(anterior);
