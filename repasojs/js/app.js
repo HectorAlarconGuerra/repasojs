@@ -131,11 +131,11 @@
 
 //Objetos
 
-const persona = {
-  nombre: "Juan",
-  profesion: "Desarrollado Web",
-  edad: 500,
-};
+// const persona = {
+//   nombre: "Juan",
+//   profesion: "Desarrollado Web",
+//   edad: 500,
+// };
 //console.log(persona);
 // const mostrarCliente = mostrarInformacionTarea(
 //   persona.nombre,
@@ -162,13 +162,13 @@ const persona = {
 // console.log(tarea2.mostrarInformacionTarea());
 
 // Destructuring de objetos
-const aprendiendoJS = {
-    version:{
-      nueva: 'ES6+',
-      anterior: 'ES5'
-    },
-    frameworks: ['React', 'VueJS', 'AngularJS']
-}
+// const aprendiendoJS = {
+//     version:{
+//       nueva: 'ES6+',
+//       anterior: 'ES5'
+//     },
+//     frameworks: ['React', 'VueJS', 'AngularJS']
+// }
 
 // Destructuring es extraer valores de un objeto
 
@@ -180,5 +180,74 @@ const aprendiendoJS = {
 // console.log(framework);
 
 // Destructuring forma nueva
-let {anterior} = aprendiendoJS.version;
-console.log(anterior);
+// let {anterior} = aprendiendoJS.version;
+// console.log(anterior);
+
+// Object literal enhancement
+
+// const banda = 'Metalica';
+// const genero = 'Heavy Metal';
+// const canciones = ['Master of Pupptes', 'Seek & Dsetroy', 'Enter Sandman'];
+
+// forma anterior
+// const metalica = {
+//   banda: banda,
+//   genero: genero,
+//   canciones: canciones
+// }
+
+// forma nueva
+
+// const metalica = {banda, genero, canciones};
+
+// console.log(metalica);
+
+// métodos o funciones en un objeto
+
+// const persona ={
+//   nombre: 'Héctor',
+//   trabajo: 'Desarrollador de aplicaciones móviles',
+//   edad : 43,
+//   musicaBinaural: true,
+//   mostrarInformacion(){
+//     console.log(`${this.nombre} es ${this.trabajo} y su edad es ${this.edad}`)
+//   }
+// }
+
+// persona.mostrarInformacion();
+
+// Arregls y .map
+
+//const carrito = ['Producto 1', 'Producto 2', 'Producto 3'];
+
+
+
+//console.log(carrito);
+
+// const appContenedor = document.querySelector('#app');
+// //appContenedor.innerHTML=carrito;
+// let html = '';
+// carrito.forEach(producto => {
+//   html += `<li>${producto}</li>`;
+// })
+
+// appContenedor.innerHTML = html;
+
+// carrito = ['Producto 1', 'Producto 2', 'Producto 3'];
+
+// carrito.map(producto =>{
+//   return 'El producto es ' + producto;
+// });
+
+const persona = {
+  nombre: 'Héctor',
+  profesion: 'Desarrollador aplicaciones móviles',
+  edad: 43
+
+}
+
+console.log(Object.keys(persona));
+
+// const {nombre} = persona;
+
+// console.log(nombre);
