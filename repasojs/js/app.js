@@ -239,15 +239,43 @@
 //   return 'El producto es ' + producto;
 // });
 
-const persona = {
-  nombre: 'Héctor',
-  profesion: 'Desarrollador aplicaciones móviles',
-  edad: 43
+// const persona = {
+//   nombre: 'Héctor',
+//   profesion: 'Desarrollador aplicaciones móviles',
+//   edad: 43
 
-}
+// }
 
-console.log(Object.keys(persona));
+// console.log(Object.keys(persona));
 
 // const {nombre} = persona;
 
 // console.log(nombre);
+
+// Spread Operator
+// let lenguajes = ['JavaScript', 'PHP', 'Python']
+
+// let [ultimo] = [...lenguajes].reverse();
+
+// console.log(lenguajes);
+// console.log(ultimo);
+
+// let frameworks = ['´ReactJS', 'Laravel', 'Django']
+
+// //Unir los arreglos en uno solo
+
+// //let combinacion = lenguajes.concat(frameworks);
+
+// //let combinacion = [...lenguajes, ...frameworks]
+
+// let nuevoArreglo = [...lenguajes]
+
+// console.log(nuevoArreglo);
+
+function suma(a,b,c) {
+  console.log(a+b+c);
+}
+
+const numeros = [1,2,3];
+
+suma(...numeros)
