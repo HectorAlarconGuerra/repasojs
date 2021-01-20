@@ -272,10 +272,63 @@
 
 // console.log(nuevoArreglo);
 
-function suma(a,b,c) {
-  console.log(a+b+c);
-}
+// function suma(a,b,c) {
+//   console.log(a+b+c);
+// }
 
-const numeros = [1,2,3];
+// const numeros = [1,2,3];
 
-suma(...numeros)
+// suma(...numeros)
+
+//Métodos en arreglos
+
+// const personas =[ 
+//    {nombre: 'Juan', edad: 23, aprendiendo:'JavaScript' },
+//    {nombre: 'Pablo', edad: 18, aprendiendo:'PHP' },
+//    {nombre: 'Ale', edad: 21, aprendiendo:'Rect' },
+//    {nombre: 'Ka', edad: 33, aprendiendo:'JS' },
+//   ]
+
+//   console.log(personas)
+
+//   // mayores de 28
+
+//   const mayores = personas.filter(persona =>{
+//     return persona.edad > 18;
+//   })
+
+//   console.log(mayores);
+
+//   //Que aprende ale y su edad
+//   const alejandra = personas.find(persona => {
+//     return persona.nombre === "Ale"
+//   })
+
+//   console.log('Alejandra esta aprendiendo: ' + alejandra.aprendiendo);
+
+//   let total = personas.reduce((edadTotal, persona)=>{
+// return edadTotal + persona.edad
+//   },0);
+
+
+//   console.log(total/personas.length);
+
+//Promises
+
+const aplicarDescuento = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    let descuento = true;
+    if (descuento) {
+      resolve('Descuento aplicado');
+
+    } else {
+      reject('No se pudo aplicar el descuento')
+    }
+  }, 3000);
+});
+
+aplicarDescuento.then(resultado =>{
+  console.log(resultado);
+}).catch(error => {
+  console.log(error);
+})
