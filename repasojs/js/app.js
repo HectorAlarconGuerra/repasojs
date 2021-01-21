@@ -315,20 +315,52 @@
 
 //Promises
 
-const aplicarDescuento = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    let descuento = true;
-    if (descuento) {
-      resolve('Descuento aplicado');
+// const aplicarDescuento = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     let descuento = true;
+//     if (descuento) {
+//       resolve('Descuento aplicado');
 
-    } else {
-      reject('No se pudo aplicar el descuento')
+//     } else {
+//       reject('No se pudo aplicar el descuento')
+//     }
+//   }, 3000);
+// });
+
+// aplicarDescuento.then(resultado =>{
+//   console.log(resultado);
+// }).catch(error => {
+//   console.log(error);
+// })
+
+const descargarUsuarios = cantidad => new Promise((resolve, reject)=>{
+  //pasar la cantidad a la api
+
+  const api = `https://randomuser.me/api/?results=${cantidad}&nat=us`;
+
+  // llamado a ajax
+  const xhr = new XMLHttpRequest();
+
+  //abrir la conexión
+  xhr.open('GET',api,true)
+
+  // on load
+  xhr.onload = () => {
+    if(xhr.status === 200){
+      resolve(JSON.parse(xhr.responseText).results);
+    }else{
+      reject(Error(xhr.statusText));
     }
-  }, 3000);
+  }
+  //enviar
+  xhr.send()
+
 });
 
-aplicarDescuento.then(resultado =>{
-  console.log(resultado);
-}).catch(error => {
-  console.log(error);
-})
+descargarUsuarios(29)
+      .then(
+            miembros => console.log(miembros),
+            error => console.error(
+              new Error('Hubo un error' + error)
+            )
+      )
