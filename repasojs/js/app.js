@@ -333,51 +333,74 @@
 //   console.log(error);
 // })
 
-const descargarUsuarios = cantidad => new Promise((resolve, reject)=>{
-  //pasar la cantidad a la api
+// const descargarUsuarios = cantidad => new Promise((resolve, reject)=>{
+//   //pasar la cantidad a la api
 
-  const api = `https://randomuser.me/api/?results=${cantidad}&nat=us`;
+//   const api = `https://randomuser.me/api/?results=${cantidad}&nat=us`;
 
-  // llamado a ajax
-  const xhr = new XMLHttpRequest();
+//   // llamado a ajax
+//   const xhr = new XMLHttpRequest();
 
-  //abrir la conexión
-  xhr.open('GET',api,true)
+//   //abrir la conexión
+//   xhr.open('GET',api,true)
 
-  // on load
-  xhr.onload = () => {
-    if(xhr.status === 200){
-      resolve(JSON.parse(xhr.responseText).results);
-    }else{
-      reject(Error(xhr.statusText));
-    }
+//   // on load
+//   xhr.onload = () => {
+//     if(xhr.status === 200){
+//       resolve(JSON.parse(xhr.responseText).results);
+//     }else{
+//       reject(Error(xhr.statusText));
+//     }
+//   }
+//   //enviar
+//   xhr.send()
+
+// });
+
+// descargarUsuarios(29)
+//       .then(
+//             miembros => imprimirHTML(miembros),
+//             error => console.error(
+//               new Error('Hubo un error' + error)
+//             )
+//       )
+
+// function imprimirHTML(usuarios){
+//   let html = '';  
+//   usuarios.forEach(usuario => {
+//       html += `
+//         <li>
+//         Nombre: ${usuario.name.first} ${usuario.name.last}
+//         País: ${usuario.nat}
+//         Imagen: 
+//         <img src="${usuario.picture.medium}">
+//         </li>
+//       `;
+//     });
+
+//     const contenedorApp = document.querySelector('#app');
+//     contenedorApp.innerHTML = html;
+// }
+
+// Escribir clases
+
+class Tarea {
+  constructor(nombre, prioridad){
+      this.nombre = nombre;
+      this.prioridad = prioridad
   }
-  //enviar
-  xhr.send()
-
-});
-
-descargarUsuarios(29)
-      .then(
-            miembros => imprimirHTML(miembros),
-            error => console.error(
-              new Error('Hubo un error' + error)
-            )
-      )
-
-function imprimirHTML(usuarios){
-  let html = '';  
-  usuarios.forEach(usuario => {
-      html += `
-        <li>
-        Nombre: ${usuario.name.first} ${usuario.name.last}
-        País: ${usuario.nat}
-        Imagen: 
-        <img src="${usuario.picture.medium}">
-        </li>
-      `;
-    });
-
-    const contenedorApp = document.querySelector('#app');
-    contenedorApp.innerHTML = html;
+  mostrar(){
+    return(`${this.nombre} tiene una prioridad de ${this.prioridad}`);
+  }
 }
+
+// crear los objetos
+let tarea1 = new Tarea('Aprender JavaScript', 'Alta')
+let tarea2 = new Tarea('Prepara café', 'Alta')
+let tarea3 = new Tarea('Pasear al perro', 'Media')
+let tarea4 = new Tarea('Conocer a mis suegro', 'Baja')
+
+console.log(tarea1.mostrar());
+console.log(tarea2.mostrar());
+console.log(tarea3.mostrar());
+console.log(tarea4.mostrar());
