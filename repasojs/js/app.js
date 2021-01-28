@@ -282,7 +282,7 @@
 
 //Métodos en arreglos
 
-// const personas =[ 
+// const personas =[
 //    {nombre: 'Juan', edad: 23, aprendiendo:'JavaScript' },
 //    {nombre: 'Pablo', edad: 18, aprendiendo:'PHP' },
 //    {nombre: 'Ale', edad: 21, aprendiendo:'Rect' },
@@ -366,13 +366,13 @@
 //       )
 
 // function imprimirHTML(usuarios){
-//   let html = '';  
+//   let html = '';
 //   usuarios.forEach(usuario => {
 //       html += `
 //         <li>
 //         Nombre: ${usuario.name.first} ${usuario.name.last}
 //         País: ${usuario.nat}
-//         Imagen: 
+//         Imagen:
 //         <img src="${usuario.picture.medium}">
 //         </li>
 //       `;
@@ -384,41 +384,45 @@
 
 // Escribir clases
 
-class Tarea {
-  constructor(nombre, prioridad){
-      this.nombre = nombre;
-      this.prioridad = prioridad
-  }
-  mostrar(){
-    console.log(`${this.nombre} tiene una prioridad de ${this.prioridad}`);
-  }
-}
+// class Tarea {
+//   constructor(nombre, prioridad){
+//       this.nombre = nombre;
+//       this.prioridad = prioridad
+//   }
+//   mostrar(){
+//     console.log(`${this.nombre} tiene una prioridad de ${this.prioridad}`);
+//   }
+// }
 
-class ComprasPendientes extends Tarea{
-  constructor(nombre, prioridad, cantidad){
-     super(nombre, prioridad);
-     this.cantidad = cantidad;
-  }
-  mostrar(){
-    super.mostrar();
-    console.log(`y la cantidad ${this.cantidad}`);
-  }
-  hola(){
-    return 'hola';
-  }
-}
+// class ComprasPendientes extends Tarea{
+//   constructor(nombre, prioridad, cantidad){
+//      super(nombre, prioridad);
+//      this.cantidad = cantidad;
+//   }
+//   mostrar(){
+//     super.mostrar();
+//     console.log(`y la cantidad ${this.cantidad}`);
+//   }
+//   hola(){
+//     return 'hola';
+//   }
+// }
 
-// crear los objetos
-let tarea1 = new Tarea('Aprender JavaScript', 'Alta')
-let tarea2 = new Tarea('Prepara café', 'Alta')
-let tarea3 = new Tarea('Pasear al perro', 'Media')
-let tarea4 = new Tarea('Conocer a mis suegro', 'Baja')
+// // crear los objetos
+// let tarea1 = new Tarea('Aprender JavaScript', 'Alta')
+// let tarea2 = new Tarea('Prepara café', 'Alta')
+// let tarea3 = new Tarea('Pasear al perro', 'Media')
+// let tarea4 = new Tarea('Conocer a mis suegro', 'Baja')
 
-// console.log(tarea1.mostrar());
-// console.log(tarea2.mostrar());
-// console.log(tarea3.mostrar());
-// console.log(tarea4.mostrar());
+// // console.log(tarea1.mostrar());
+// // console.log(tarea2.mostrar());
+// // console.log(tarea3.mostrar());
+// // console.log(tarea4.mostrar());
 
-let compra1 = new ComprasPendientes('Jabon','Urgente', 3)
-compra1.mostrar();
-console.log(compra1.hola())
+// let compra1 = new ComprasPendientes('Jabon','Urgente', 3)
+// compra1.mostrar();
+// console.log(compra1.hola())
+import {nombreTarea} from './tareas.js';
+
+
+console.log(nombreTarea);
