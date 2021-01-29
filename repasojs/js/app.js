@@ -422,7 +422,12 @@
 // let compra1 = new ComprasPendientes('Jabon','Urgente', 3)
 // compra1.mostrar();
 // console.log(compra1.hola())
-import {nombreTarea} from './tareas.js';
+import {nombreTarea, crearTarea, tareaCompletada} from './tareas.js';
 
 
 console.log(nombreTarea);
+
+const tarea1 = crearTarea('Pasear al perro', 'Media');
+
+console.log(tarea1);
+tareaCompletada();
